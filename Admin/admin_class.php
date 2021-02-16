@@ -84,7 +84,7 @@ Class Action {
 			return 2;
 			exit;
 		}
-			 $save = $this->db->query("INSERT INTO users set ".$data);
+			$save = $this->db->query("INSERT INTO users set ".$data);
 		if($save){
 			$qry = $this->db->query("SELECT * FROM users where username = '".$email."' and password = '".md5($password)."' ");
 			if($qry->num_rows > 0){
